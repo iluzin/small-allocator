@@ -4,8 +4,12 @@
 #include <cassert>
 #include <cstring>
 
+#ifndef MEMORY_SIZE
+#define MEMORY_SIZE 1048576
+#endif
+
 class SmallAllocator {
-    char memory_[1048576];
+    char memory_[MEMORY_SIZE];
     
 public:
     SmallAllocator(void) {
